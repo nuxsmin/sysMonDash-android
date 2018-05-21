@@ -1,0 +1,97 @@
+{
+  "status": 0,
+  "data": [
+    {
+      "state": 0,
+      "lastHardStateChange": 1524995036,
+      "hostDisplayName": "Host de Prueba (OK)",
+      "backendAlias": "Backend de Prueba1",
+      "displayName": "Espacio disco",
+      "pluginOutput": "Disco al 85%",
+      "activeChecksEnabled": false,
+      "notificationsEnabled": false,
+      "hostScheduledDowntimeDepth": 1,
+      "scheduledDowntimeDepth": 1,
+      "acknowledged": false
+    },
+    {
+      "state": 1,
+      "lastHardStateChange": 1524995050,
+      "hostDisplayName": "Host de Prueba (INFO)",
+      "backendAlias": "Backend de Prueba1",
+      "displayName": "Memoria RAM",
+      "pluginOutput": "Memoria > 85%",
+      "activeChecksEnabled": true,
+      "notificationsEnabled": true,
+      "hostScheduledDowntimeDepth": 0,
+      "scheduledDowntimeDepth": 0,
+      "acknowledged": false
+    },
+    {
+      "state": 1,
+      "lastHardStateChange": 1524995064,
+      "hostDisplayName": "Host de Prueba (WARNING)",
+      "backendAlias": "Backend de Prueba2",
+      "displayName": "Uso CPU",
+      "pluginOutput": "CPU > 85%",
+      "activeChecksEnabled": true,
+      "notificationsEnabled": true,
+      "hostScheduledDowntimeDepth": 1,
+      "scheduledDowntimeDepth": 1,
+      "acknowledged": true
+    },
+    {
+      "state": 3,
+      "lastHardStateChange": 1524995026,
+      "hostDisplayName": "Host de Prueba (AVERAGE)",
+      "backendAlias": "Backend de Prueba2",
+      "displayName": "Ping",
+      "pluginOutput": "Ping Internet",
+      "activeChecksEnabled": false,
+      "notificationsEnabled": true,
+      "hostScheduledDowntimeDepth": 0,
+      "scheduledDowntimeDepth": 0,
+      "acknowledged": false
+    },
+    {
+      "state": 4,
+      "lastHardStateChange": 1524995016,
+      "hostDisplayName": "Host de Prueba (HIGH)",
+      "backendAlias": "Backend de Prueba3",
+      "displayName": "Copia Seguridad",
+      "pluginOutput": "Copia seguridad correcta",
+      "activeChecksEnabled": true,
+      "notificationsEnabled": false,
+      "hostScheduledDowntimeDepth": 0,
+      "scheduledDowntimeDepth": 0,
+      "acknowledged": false
+    },
+    {
+      "state": 5,
+      "lastHardStateChange": 1524995078,
+      "hostDisplayName": "Host de Prueba (CRITICAL)",
+      "backendAlias": "Backend de Prueba3",
+      "displayName": "Espacio disco",
+      "pluginOutput": "Disco al 85%",
+      "activeChecksEnabled": true,
+      "notificationsEnabled": true,
+      "hostScheduledDowntimeDepth": 0,
+      "scheduledDowntimeDepth": 0,
+      "acknowledged": true
+    },
+    {
+      "state": 6,
+      "lastHardStateChange": 1524995100,
+      "hostDisplayName": "Host de Prueba (UNKNOWN)",
+      "backendAlias": "Backend de Prueba4",
+      "displayName": "Espacio disco",
+      "pluginOutput": "Disco al 85%",
+      "activeChecksEnabled": true,
+      "notificationsEnabled": true,
+      "hostScheduledDowntimeDepth": 0,
+      "scheduledDowntimeDepth": 0,
+      "acknowledged": false
+    }
+  ],
+  "action": 1
+}

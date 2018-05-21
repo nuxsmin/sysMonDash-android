@@ -1,0 +1,116 @@
+
+<resources>
+    <string name="app_name" translatable="false">sysMonDash</string>
+    <string name="title_activity_events" translatable="false">EventsActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_sort_type">Sort by Type</string>
+    <string name="action_sort_backend">Sort by Backend</string>
+    <string name="action_sort_time">Sort by Time</string>
+    <string name="search_hint">Text to search in events</string>
+    <string name="undefined_smd_server">SMD server not set</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_proxy">Enable proxy server</string>
+    <string name="pref_description_proxy">Proxy server for connecting to SMD server through</string>
+
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_sound">Sound</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="action_sort_server">Sort by Server</string>
+    <string name="pref_header_server">Server</string>
+    <string name="pref_header_auth">Security</string>
+    <string name="pref_default_server_url" translatable="false">http://www.smd.org/api</string>
+    <string name="pref_title_url" translatable="false">URL</string>
+    <string name="pref_title_api_token">API Token</string>
+    <string name="pref_title_backends">Backends</string>
+    <string name="pref_title_server">Server</string>
+    <string name="pref_title_port">Port</string>
+    <string name="pref_title_user">User</string>
+    <string name="pref_title_password">Password</string>
+    <string name="pref_title_displayNotifications">Show notifications</string>
+    <string name="pref_title_event_notifications">Event notifications</string>
+    <string name="pref_description_auth">Enables the configuration locking</string>
+    <string name="pref_title_enable_auth">Enable locking</string>
+    <string name="pref_smd_server">SMD Server</string>
+    <string name="pref_proxy_server">Proxy Server</string>
+    <string name="pref_auth">Seguridad</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="server_label">Server: %1$s (%2$s)</string>
+    <string name="time_label">Since %1$s @ %2$s</string>
+    <string name="action_sort_reset">Reset filtering</string>
+    <string name="action_share_event">Share</string>
+    <string name="action_share_event_description">Share event details</string>
+    <string name="Actions">Actions</string>
+    <string name="Share">Share</string>
+    <string name="title_actions">Actions</string>
+    <string name="actionbar_settings">Settings</string>
+    <string name="title_activity_settings_auth">Settings</string>
+    <string name="unlock">Unlock</string>
+    <string name="unlock_settings">Unlock Settings</string>
+    <string name="user">User</string>
+    <string name="wrong_auth">Wrong user or pass</string>
+    <string name="smd_event_notify_title">(%1$s) SMD Event</string>
+    <string name="check_smd_events">Checkout %1$d SMD events</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="search_text">Search text</string>
+    <string name="updating_events">Updating events</string>
+    <string name="error">Error:  %1$s</string>
+    <string name="wrong_json_data">Wrong JSON data</string>
+    <string name="pref_description_smd_auth">Enables auth basic for connecting to SMD server</string>
+    <string name="pref_title_smd_auth">Enable auth</string>
+    <string name="action_add_backend_event">Add backend</string>
+    <string name="backends_delete">Delete backends</string>
+    <string name="backend_added">Backend added</string>
+    <string name="backend_not_added">Backend not added</string>
+    <string name="backends_deleted">Backends deleted</string>
+    <string name="pref_filter_active">Show only active events</string>
+    <string name="pref_title_filter_active">Show only active</string>
+    <string name="pref_filter_acknowledged">Show acknowledged events</string>
+    <string name="pref_title_filter_acknowledge">Show acknowledged</string>
+    <string name="pref_filter_scheduled">Show events in scheduled downtime</string>
+    <string name="pref_title_filter_scheduled">Show scheduled</string>
+    <string name="pref_header_event_filters">Event filters</string>
+    <string name="network_connection_unavailable">Network connection unavailable</string>
+    <string name="pref_title_reset_auth">Reset auth</string>
+    <string name="pref_summary_reset_auth">Reset the auth data including salt</string>
+    <string name="auth_reset">Auth reset</string>
+    <string name="pref_title_play_sound">Play sound</string>
+    <string name="notification_channel_description">Shows notifications for recent events</string>
+    <string name="share_event_title">Share event</string>
+    <string name="url_not_set">URL not set</string>
+    <string name="smd_event_subject">SMD event</string>
+    <string name="share_event_text">
+            |Event: %1$s\n
+            |Server: %2$s\n
+            |Severity: %3$s\n
+            |Backend: %4$s\n
+            |Date start: %5$s\n
+            |Time: %6$s\n
+            |Details: %7$s
+    </string>
+    <string name="share_event_html">
+        <![CDATA[
+        |<div class="msg-event">
+            |<p class="event">Event: %1$s</p>
+            |<p class="server">Server: %2$s</p>
+            |<p class="severity">Severity: %3$s</p>
+            |<p class="backend">Backend: %4$s</p>
+            |<p class="date-start">Date start: %5$s</p>
+            |<p class="time-since">Time: %6$s</p>
+            |<p class="time-since">Details: %7$s</p>
+            |</div>
+        ]]>
+    </string>
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+    <string name="pref_title_useLightTheme">Use light theme</string>
+
+</resources>

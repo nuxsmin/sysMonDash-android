@@ -1,0 +1,55 @@
+
+<resources>
+
+    <style name="AppTheme" parent="SmdTheme.Dark">
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/slide_right</item>
+        <item name="android:windowExitTransition">@android:transition/slide_left</item>
+    </style>
+
+    <!-- Tema personalizado de la aplicación -->
+    <style name="SmdTheme">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+    </style>
+
+    <style name="SmdTheme.Dark" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="eventListTextColor">@color/colorForegroundTextDark</item>
+        <item name="eventListHighlightTextColor">@color/colorTitleText</item>
+        <item name="eventListBackgroundColor">@color/primaryDarkColor</item>
+        <item name="preferenceIconGeneral">@drawable/ic_settings_teal_24dp</item>
+        <item name="preferenceIconServer">@drawable/ic_cloud_teal_24dp</item>
+        <item name="preferenceIconEventFilters">@drawable/ic_filter_list_teal_24dp</item>
+        <item name="preferenceIconNotifications">@drawable/ic_notifications_teal_24dp</item>
+        <item name="preferenceIconAuth">@drawable/ic_phonelink_lock_teal_24dp</item>
+    </style>
+
+    <style name="SmdTheme.Light" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="eventListTextColor">@color/colorForegroundTextLight</item>
+        <item name="eventListHighlightTextColor">@color/colorTitleText</item>
+        <item name="eventListBackgroundColor">@color/primaryLightColor</item>
+        <item name="preferenceIconGeneral">@drawable/ic_settings_teal_24dp</item>
+        <item name="preferenceIconServer">@drawable/ic_cloud_teal_24dp</item>
+        <item name="preferenceIconEventFilters">@drawable/ic_filter_list_teal_24dp</item>
+        <item name="preferenceIconNotifications">@drawable/ic_notifications_teal_24dp</item>
+        <item name="preferenceIconAuth">@drawable/ic_phonelink_lock_teal_24dp</item>
+    </style>
+
+    <!-- Estilo para la lista de eventos -->
+    <style name="SmdTheme.Events">
+        <item name="android:background">?attr/eventListBackgroundColor</item>
+        <item name="android:textColor">?attr/eventListTextColor</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/text_margin</item>
+        <item name="android:paddingEnd">@dimen/text_margin</item>
+    </style>
+
+</resources>

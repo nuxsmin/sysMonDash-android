@@ -1,0 +1,12 @@
+{
+  "status": 0,
+  "data": [
+    {
+      "stateType": 0,
+      "lastHardState": 1524995036,
+      "hostDisplayName": "Host de Prueba",
+      "backendAlias": "Backend de Prueba"
+    }
+  ],
+  "action": 1
+}

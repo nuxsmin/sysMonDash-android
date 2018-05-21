@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="pref_security"
+        android:title="@string/pref_header_auth">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="auth_enabled"
+            android:summary="@string/pref_description_auth"
+            android:title="@string/pref_title_enable_auth" />
+
+        <org.cygnux.smdmobile.configuration.preference.HashedEditTextPreference
+            android:dependency="auth_enabled"
+            android:key="auth_user"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:title="@string/pref_title_user" />
+
+        <org.cygnux.smdmobile.configuration.preference.HashedEditTextPreference
+            android:dependency="auth_enabled"
+            android:key="auth_pass"
+            android:maxLines="1"
+            android:password="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_password" />
+
+        <Preference
+            android:dependency="auth_enabled"
+            android:key="auth_reset"
+            android:summary="@string/pref_summary_reset_auth"
+            android:title="@string/pref_title_reset_auth" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

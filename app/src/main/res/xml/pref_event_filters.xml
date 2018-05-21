@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="pref_filterss"
+        android:title="@string/pref_header_event_filters">
+        <SwitchPreference
+            android:defaultValue="fal"
+            android:key="event_filter_active"
+            android:summary="@string/pref_filter_active"
+            android:title="@string/pref_title_filter_active" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="event_filter_acknowledged"
+            android:summary="@string/pref_filter_acknowledged"
+            android:title="@string/pref_title_filter_acknowledge" />
+
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="event_filter_scheduled"
+            android:summary="@string/pref_filter_scheduled"
+            android:title="@string/pref_title_filter_scheduled" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

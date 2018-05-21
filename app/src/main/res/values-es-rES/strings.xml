@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="navigation_drawer_open">Abrir caja de navegación</string>
+    <string name="navigation_drawer_close">AbrirCerrarcaja de navegación</string>
+    <string name="action_settings">Configuración</string>
+    <string name="action_sort_server">Ordenar por Servidor</string>
+    <string name="action_sort_type">Ordenar por Tipo</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_sort_backend">Ordenar por Backend</string>
+    <string name="action_sort_time">Ordenar por Tiempo</string>
+    <string name="search_hint">Texto a buscar en los eventos</string>
+    <string name="undefined_smd_server">Servidor de SMD no establecido</string>
+    <string name="title_activity_settings">Configuración</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_title_sound">Sonido</string>
+    <string name="pref_title_vibrate">Vibración</string>
+    <string name="pref_header_notifications">Notificaciones</string>
+    <string name="pref_title_user">Usuario</string>
+    <string name="pref_title_password">Clave</string>
+    <string name="pref_title_api_token">Token API</string>
+    <string name="pref_title_backends">Backends</string>
+    <string name="pref_title_server">Servidor</string>
+    <string name="pref_title_port">Puerto</string>
+    <string name="pref_title_proxy">Habilitar servidor proxy</string>
+    <string name="pref_description_proxy">Servidor para conectar a servidor de SMD</string>
+    <string name="pref_header_server">Servidor</string>
+    <string name="pref_header_auth">Seguridad</string>
+    <string name="pref_title_displayNotifications">Mostrar notificaciones</string>
+    <string name="pref_title_event_notifications">Notificaciones de evento</string>
+    <string name="pref_description_auth">Habilita el bloqueo de configuración</string>
+    <string name="pref_title_enable_auth">Habilitar bloqueo</string>
+    <string name="pref_smd_server">Servidor SMD</string>
+    <string name="pref_proxy_server">Servidor proxy</string>
+    <string name="action_refresh">Actualizar</string>
+    <string name="server_label">Servidor: %1$s (%2$s)</string>
+    <string name="time_label">Hace %1$s @ %2$s</string>
+    <string name="action_sort_reset">Restablecer filtros</string>
+    <string name="action_share_event">Compartir</string>
+    <string name="action_share_event_description">Compartir detalles de evento</string>
+    <string name="Actions">Acciones</string>
+    <string name="Share">Compartir</string>
+    <string name="title_actions">Acciones</string>
+    <string name="actionbar_settings">Configuración</string>
+    <string name="title_activity_settings_auth">Autentificación</string>
+    <string name="unlock">Desbloquear</string>
+    <string name="unlock_settings">Desbloquear Configuración</string>
+    <string name="user">Usuario</string>
+    <string name="wrong_auth">Usuario o clave incorrectos</string>
+    <string name="smd_event_notify_title">(%1$s) Evento SMD</string>
+    <string name="check_smd_events">Comprobar %1$d eventos de SMD</string>
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="search_text">Buscar texto</string>
+    <string name="updating_events">Actualizando eventos</string>
+    <string name="error">Error: %1$s</string>
+    <string name="wrong_json_data">Datos JSON incorrectos</string>
+    <string name="pref_description_smd_auth">Habilita auth basic para conectar con el servidor de SMD</string>
+    <string name="pref_title_smd_auth">Habilitar auth</string>
+    <string name="action_add_backend_event">Añadir backend</string>
+    <string name="backends_delete">Eliminar backends</string>
+    <string name="backend_added">Backend añadido</string>
+    <string name="backend_not_added">Backend no añadido</string>
+    <string name="backends_deleted">Backends eliminados</string>
+    <string name="notification_channel_description">Muestra notificaciones de eventos recientes</string>
+    <string name="network_connection_unavailable">Conexión de red no disponible</string>
+    <string name="pref_auth">Security</string>
+    <string name="pref_filter_acknowledged">Mostrar eventos reconocidos</string>
+    <string name="pref_filter_active">Mostrar sólo eventos activos</string>
+    <string name="pref_filter_scheduled">Mostrar eventos programados</string>
+    <string name="pref_header_event_filters">Filtros de eventos</string>
+    <string name="pref_summary_reset_auth">Restablecer datos de autentificación incluyendo salt</string>
+    <string name="pref_title_filter_acknowledge">Mostrar eventos reconocidos</string>
+    <string name="pref_title_filter_scheduled">Mostrar eventos programados</string>
+    <string name="pref_title_filter_active">Mostrar sólo eventos activos</string>
+    <string name="pref_title_new_message_notifications">Notificaciones de nuevos mensajes</string>
+    <string name="pref_title_play_sound">Reproducir sonido</string>
+    <string name="pref_title_reset_auth">Restablecer autentificación</string>
+    <string name="auth_reset">Autentificación restablecida</string>
+    <string name="share_event_title">Compartir evento</string>
+    <string name="url_not_set">URL no establecida</string>
+    <string name="smd_event_subject">Evento SMD</string>
+    <string name="share_event_text">
+        |Evento: %1$s\n
+        |Servidor: %2$s\n
+        |Severidad: %3$s\n
+        |Backend: %4$s\n
+        |Fecha inicio: %5$s\n
+        |Tiempo: %6$s\n
+        |Detalles: %7$s
+    </string>
+    <string name="share_event_html">
+        <![CDATA[
+            <div class= msg-event>
+                |<p class= event>Evento: %1$s</p>
+                |<p class= server>Servidor: %2$s</p>
+                |<p class= severity>Severidad: %3$s</p>
+                |<p class= backend>Backend: %4$s</p>
+                |<p class= date-start>Fecha inicio: %5$s</p>
+                |<p class= time-since>Tiempo: %6$s</p>
+                |<p class= time-since>Detalles: %7$s</p>
+            |</div>
+        ]]>
+    </string>
+    <string name="pref_title_useLightTheme">Usar tema claro</string>
+</resources>

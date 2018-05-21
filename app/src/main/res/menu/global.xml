@@ -1,0 +1,44 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="@string/action_search"
+        app:showAsAction="ifRoom" />
+
+    <group
+        android:id="@+id/group_settings"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/action_settings"
+            android:title="@string/action_settings"
+            app:showAsAction="never" />
+    </group>
+
+    <group
+        android:id="@+id/group_sort"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/action_sort_server"
+            android:title="@string/action_sort_server"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_sort_type"
+            android:title="@string/action_sort_type"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_sort_backend"
+            android:title="@string/action_sort_backend"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_sort_time"
+            android:title="@string/action_sort_time"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_sort_reset"
+            android:title="@string/action_sort_reset"
+            app:showAsAction="never" />
+    </group>
+</menu>

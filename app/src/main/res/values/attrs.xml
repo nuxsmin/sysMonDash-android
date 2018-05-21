@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Atributos para la lista de eventos-->
+    <attr name="eventListTextColor" format="color" />
+    <attr name="eventListHighlightTextColor" format="color" />
+    <attr name="eventListBackgroundColor" format="color" />
+
+    <!-- Atributos para iconos -->
+    <attr name="preferenceIconGeneral" format="reference" />
+    <attr name="preferenceIconServer" format="reference" />
+    <attr name="preferenceIconEventFilters" format="reference" />
+    <attr name="preferenceIconNotifications" format="reference" />
+    <attr name="preferenceIconAuth" format="reference" />
+</resources>

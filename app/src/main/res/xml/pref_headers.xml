@@ -1,0 +1,29 @@
+
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header
+        android:fragment="org.cygnux.smdmobile.SettingsActivity$GeneralPreferenceFragment"
+        android:icon="?attr/preferenceIconGeneral"
+        android:title="@string/pref_header_general" />
+
+    <header
+        android:fragment="org.cygnux.smdmobile.SettingsActivity$ServerPreferenceFragment"
+        android:icon="?attr/preferenceIconServer"
+        android:title="@string/pref_header_server" />
+
+    <header
+        android:fragment="org.cygnux.smdmobile.SettingsActivity$EventFilterPreferenceFragment"
+        android:icon="?attr/preferenceIconEventFilters"
+        android:title="@string/pref_header_event_filters" />
+
+    <header
+        android:fragment="org.cygnux.smdmobile.SettingsActivity$NotificationPreferenceFragment"
+        android:icon="?attr/preferenceIconNotifications"
+        android:title="@string/pref_header_notifications" />
+
+    <header
+        android:fragment="org.cygnux.smdmobile.SettingsActivity$AuthPreferenceFragment"
+        android:icon="?attr/preferenceIconAuth"
+        android:title="@string/pref_header_auth" />
+
+</preference-headers>

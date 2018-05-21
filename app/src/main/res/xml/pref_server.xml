@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="pref_smd_server"
+        android:title="@string/pref_smd_server">
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_default_server_url"
+            android:key="smd_url"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_url" />
+
+        <EditTextPreference
+            android:key="smd_token"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_api_token" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="smd_auth_enabled"
+            android:summary="@string/pref_description_smd_auth"
+            android:title="@string/pref_title_smd_auth" />
+
+        <EditTextPreference
+            android:dependency="smd_auth_enabled"
+            android:key="smd_auth_user"
+            android:maxLines="1"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:title="@string/pref_title_user" />
+
+        <EditTextPreference
+            android:dependency="smd_auth_enabled"
+            android:inputType="textPassword"
+            android:key="smd_auth_pass"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:title="@string/pref_title_password" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_proxy_server"
+        android:title="@string/pref_proxy_server">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="proxy_enabled"
+            android:summary="@string/pref_description_proxy"
+            android:title="@string/pref_title_proxy" />
+
+        <EditTextPreference
+            android:dependency="proxy_enabled"
+            android:key="proxy_url"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_server" />
+
+        <EditTextPreference
+            android:dependency="proxy_enabled"
+            android:key="proxy_user"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_user" />
+
+        <EditTextPreference
+            android:dependency="proxy_enabled"
+            android:key="proxy_pass"
+            android:maxLines="1"
+            android:password="true"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_password" />
+    </PreferenceCategory>
+
+<!--    <PreferenceCategory
+        android:key="pref_backends"
+        android:title="@string/pref_title_backends">
+
+        <Preference
+            android:key="backends_delete"
+            android:title="Delete backends list" />
+
+    </PreferenceCategory>-->
+
+</PreferenceScreen>

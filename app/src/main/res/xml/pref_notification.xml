@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="pref_notifications"
+        android:title="@string/pref_header_notifications">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="notifications_enabled"
+            android:title="@string/pref_title_event_notifications" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="notifications_enabled"
+            android:key="notifications_display"
+            android:title="@string/pref_title_displayNotifications" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="notifications_enabled"
+            android:key="notifications_sound_enabled"
+            android:title="@string/pref_title_play_sound" />
+
+        <!-- NOTE: RingtonePreference's summary should be set to its value by the activity code. -->
+        <RingtonePreference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:dependency="notifications_sound_enabled"
+            android:key="notifications_sound"
+            android:ringtoneType="notification"
+            android:title="@string/pref_title_sound" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="notifications_enabled"
+            android:key="notifications_vibrate"
+            android:title="@string/pref_title_vibrate" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
