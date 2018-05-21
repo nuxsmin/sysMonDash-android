@@ -14,3 +14,11 @@ If you need to test some features, you could use the SMD demo server API by sett
 - API Token: gJBHeGyvu1ym4KzIHsZDUj81Z8ecHKNQ
 
 It uses a "dummy" backed that has some predefined events and generates a random event timestamp every 2 hours.
+
+---
+
+Screenshots are really useful...
+
+![Main Screen](http://sysmondash.cygnux.org:11080/assets/scr-1.jpg)
+
+![Settings Screen](http://sysmondash.cygnux.org:11080/assets/scr-2.jpg)
