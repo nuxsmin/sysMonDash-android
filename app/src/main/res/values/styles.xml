@@ -44,7 +44,6 @@
 
     <!-- Estilo para la lista de eventos -->
     <style name="SmdTheme.Events">
-        <item name="android:background">?attr/eventListBackgroundColor</item>
         <item name="android:textColor">?attr/eventListTextColor</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
