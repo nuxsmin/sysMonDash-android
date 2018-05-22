@@ -54,10 +54,6 @@ class EventsRecyclerViewAdapter(
      * Listener del para la acción de puslsación en el menú contextual
      */
     private val mOnClickListener: View.OnClickListener
-    /**
-     * Listener del elemento para la acción de puslsación en el menú contextual
-     */
-    private lateinit var mOnMenuItemClickListener: MenuItem.OnMenuItemClickListener
     private val mEventsCopy = ArrayList<EventInterface>()
     private var mBackgroundColor: Int = 0
     private var mTimeBackgroundColor: Int = 0
@@ -87,16 +83,15 @@ class EventsRecyclerViewAdapter(
         val item = mEvents[position]
 
         // Establecer los datos del elemento de la lista
-
-        holder.mHeaderTextView.text = item.description
-        holder.mTypeTextView.text = item.type.toString()
+        holder.headerTextView.text = item.description
+        holder.typeTextView.text = item.type.toString()
 
         if (item.details.isNotEmpty()) {
-            holder.mDescriptionTextView.text = item.details
+            holder.descriptionTextView.text = item.details
         }
 
-        holder.mServerTextView.text = context.getString(R.string.server_label, item.server, item.backend)
-        holder.mTimeTextView.text = context.getString(R.string.time_label, getTimeSinceFormat(item.timeSince), getTimestamp(item.time))
+        holder.serverTextView.text = context.getString(R.string.server_label, item.server, item.backend)
+        holder.timeTextView.text = context.getString(R.string.time_label, getTimeSinceFormat(item.timeSince), getTimestamp(item.time))
 
         // Establecer el color de fondo del elemento de la lista según el estado y el tipo de evento
         when {
@@ -106,32 +101,27 @@ class EventsRecyclerViewAdapter(
         }
 
         when (item.type) {
-            EventType.CRITICAL -> holder.mTypeTextView.setBackgroundColor(Color.parseColor(EventColor.CRITICAL.hex))
-            EventType.HIGH -> holder.mTypeTextView.setBackgroundColor(Color.parseColor(EventColor.HIGH.hex))
-            EventType.AVERAGE -> holder.mTypeTextView.setBackgroundColor(Color.parseColor(EventColor.AVERAGE.hex))
-            EventType.WARNING -> holder.mTypeTextView.setBackgroundColor(Color.parseColor(EventColor.WARNING.hex))
-            EventType.INFORMATION -> holder.mTypeTextView.setBackgroundColor(Color.parseColor(EventColor.INFORMATION.hex))
-            EventType.OK -> holder.mTypeTextView.setBackgroundColor(Color.parseColor(EventColor.OK.hex))
-            else -> holder.mTypeTextView.setBackgroundColor(Color.parseColor(EventColor.UNKNOWN.hex))
+            EventType.CRITICAL -> holder.typeTextView.setBackgroundColor(Color.parseColor(EventColor.CRITICAL.hex))
+            EventType.HIGH -> holder.typeTextView.setBackgroundColor(Color.parseColor(EventColor.HIGH.hex))
+            EventType.AVERAGE -> holder.typeTextView.setBackgroundColor(Color.parseColor(EventColor.AVERAGE.hex))
+            EventType.WARNING -> holder.typeTextView.setBackgroundColor(Color.parseColor(EventColor.WARNING.hex))
+            EventType.INFORMATION -> holder.typeTextView.setBackgroundColor(Color.parseColor(EventColor.INFORMATION.hex))
+            EventType.OK -> holder.typeTextView.setBackgroundColor(Color.parseColor(EventColor.OK.hex))
+            else -> holder.typeTextView.setBackgroundColor(Color.parseColor(EventColor.UNKNOWN.hex))
         }
 
         if (item.timeSince < MAX_TIME_RECENT) {
-            holder.mTimeTextView.setBackgroundColor(Color.parseColor(EventColor.CRITICAL.hex))
-            holder.mTimeTextView.setTypeface(null, Typeface.BOLD)
+            holder.timeTextView.setBackgroundColor(Color.parseColor(EventColor.CRITICAL.hex))
+            holder.timeTextView.setTypeface(null, Typeface.BOLD)
         } else {
-            holder.mTimeTextView.setBackgroundColor(mTimeBackgroundColor)
-            holder.mTimeTextView.setTypeface(null, Typeface.NORMAL)
+            holder.timeTextView.setBackgroundColor(mTimeBackgroundColor)
+            holder.timeTextView.setTypeface(null, Typeface.NORMAL)
         }
 
         with(holder.mView) {
+            // Se asocia el objeto del evento al tag de la vista del elemento
             tag = item
             setOnClickListener(mOnClickListener)
-        }
-
-        mOnMenuItemClickListener = MenuItem.OnMenuItemClickListener {
-            // Notificar a los Listeners el click en el elemento de la lista
-            mListener?.onListActionMenuClick(it, item)
-            true
         }
     }
 
@@ -141,11 +131,11 @@ class EventsRecyclerViewAdapter(
      * Clase interna para los objetos de la vista de cada elemento de la lista
      */
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView), View.OnCreateContextMenuListener {
-        val mServerTextView: TextView = mView.findViewById(R.id.item_server) as TextView
-        val mHeaderTextView: TextView = mView.findViewById(R.id.item_header) as TextView
-        val mTypeTextView: TextView = mView.findViewById(R.id.item_type) as TextView
-        val mDescriptionTextView: TextView = mView.findViewById(R.id.item_description) as TextView
-        val mTimeTextView: TextView = mView.findViewById(R.id.item_time) as TextView
+        val serverTextView: TextView = mView.findViewById(R.id.item_server) as TextView
+        val headerTextView: TextView = mView.findViewById(R.id.item_header) as TextView
+        val typeTextView: TextView = mView.findViewById(R.id.item_type) as TextView
+        val descriptionTextView: TextView = mView.findViewById(R.id.item_description) as TextView
+        val timeTextView: TextView = mView.findViewById(R.id.item_time) as TextView
 
         init {
             mView.setOnCreateContextMenuListener(this)
@@ -163,7 +153,14 @@ class EventsRecyclerViewAdapter(
 
             actionsMenu
                     .add(Menu.NONE, 0, Menu.NONE, mView.context.getString(R.string.action_share_event))
-                    .setOnMenuItemClickListener(mOnMenuItemClickListener)
+                    // Listener del elemento para la acción de puslsación en el menú contextual
+                    .setOnMenuItemClickListener({
+                        // Notificar a los Listeners el click en el elemento del menú contextual.
+                        // Se utiliza el tag ya que contiene el objeto del evento
+                        // asociado al elemento de la lista
+                        mListener?.onListActionMenuClick(it, mView.tag as EventInterface)
+                        true
+                    })
 
 //            actionsMenu
 //                    .add(Menu.NONE, 1, Menu.NONE, mView.context.getString(R.string.action_add_backend_event))
