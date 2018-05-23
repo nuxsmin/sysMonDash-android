@@ -9,6 +9,7 @@
         <SwitchPreference
             android:defaultValue="false"
             android:key="general_light_theme_enabled"
-            android:title="@string/pref_title_useLightTheme" />
+            android:title="@string/pref_title_useLightTheme"
+            android:summary="@string/pref_sum_light_theme"/>
     </PreferenceCategory>
 </PreferenceScreen>

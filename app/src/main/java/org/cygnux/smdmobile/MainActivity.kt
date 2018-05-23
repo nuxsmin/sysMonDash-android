@@ -129,6 +129,8 @@ class MainActivity : AppCompatActivity(), EventFragment.OnListFragmentInteractio
     private fun sortEventsBy(filterType: FilterType) {
         Log.i(LOG_TAG, "Ordenando por '$filterType'")
 
+        var message = ""
+
         with(mEventFragment) {
             // Restablecer el orden si en tipo de filtro es diferente
             if (eventFilter.filterType != filterType) {
@@ -144,7 +146,11 @@ class MainActivity : AppCompatActivity(), EventFragment.OnListFragmentInteractio
             eventFilter.filterType = filterType
 
             applyFilter()
+
+            message = "${filterType.name} - ${eventFilter.filterOrder}"
         }
+
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     /**
@@ -184,14 +190,15 @@ class MainActivity : AppCompatActivity(), EventFragment.OnListFragmentInteractio
      * Mostrar el diálogo de búsqueda
      */
     private fun showSearchDialog() {
-        val input = EditText(applicationContext)
-        input.inputType = InputType.TYPE_CLASS_TEXT
+        val input = EditText(this)
+        input.inputType = InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS
 
         with(AlertDialog.Builder(this)) {
             setTitle(getString(R.string.search_text))
             setView(input)
             setPositiveButton(getString(R.string.ok)) { _, _ -> searchEventByText(input.text.toString()) }
             setNegativeButton(getString(R.string.cancel)) { dialog, _ -> dialog.cancel() }
+            create()
             show()
         }
     }

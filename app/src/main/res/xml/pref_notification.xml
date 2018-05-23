@@ -14,12 +14,14 @@
             android:defaultValue="false"
             android:dependency="notifications_enabled"
             android:key="notifications_display"
+            android:summary="@string/pref_sum_notifications_display"
             android:title="@string/pref_title_displayNotifications" />
 
         <SwitchPreference
             android:defaultValue="false"
             android:dependency="notifications_enabled"
             android:key="notifications_sound_enabled"
+            android:summary="@string/pref_sum_notification_sound_enabled"
             android:title="@string/pref_title_play_sound" />
 
         <!-- NOTE: RingtonePreference's summary should be set to its value by the activity code. -->
@@ -28,12 +30,14 @@
             android:dependency="notifications_sound_enabled"
             android:key="notifications_sound"
             android:ringtoneType="notification"
+            android:summary="@string/pref_sum_notifications_sound"
             android:title="@string/pref_title_sound" />
 
         <SwitchPreference
             android:defaultValue="false"
             android:dependency="notifications_enabled"
             android:key="notifications_vibrate"
+            android:summary="@string/pref_sum_notifications_vibrate"
             android:title="@string/pref_title_vibrate" />
     </PreferenceCategory>
 

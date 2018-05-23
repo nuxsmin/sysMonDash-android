@@ -112,5 +112,10 @@
     </string>
     <string name="pref_title_new_message_notifications">New message notifications</string>
     <string name="pref_title_useLightTheme">Use light theme</string>
+    <string name="pref_sum_light_theme">Application restart needed</string>
+    <string name="pref_sum_notifications_display">Shows new events notification on the status bar</string>
+    <string name="pref_sum_notification_sound_enabled">Plays a sound on new events notification</string>
+    <string name="pref_sum_notifications_sound">Sets a sound for notifications tone</string>
+    <string name="pref_sum_notifications_vibrate">Enables vibration on new events notification</string>
 
 </resources>
