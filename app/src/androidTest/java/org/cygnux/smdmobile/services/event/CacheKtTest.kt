@@ -27,7 +27,7 @@ import android.support.test.InstrumentationRegistry
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
-internal class CacheTest {
+internal class CacheKtTest {
     private val mEvents = mutableSetOf("aaa", "bbb", "ccc", "ddd", "fff")
 
     /**

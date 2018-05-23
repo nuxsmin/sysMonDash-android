@@ -50,18 +50,12 @@ internal class EventsKtTest {
     }
 
     /**
-     * Comprobar que los eventos recibidos desde una conexión son correctos
-     */
-    @Test
-    fun check_list_connection_events() {
-        assertThatCode { List(jsonDataValid).getEvents() }.doesNotThrowAnyException()
-    }
-
-    /**
      * Comprobar el comportamiento del parseo de eventos en JSON
      */
     @Test
     fun check_list_events() {
+        assertThatCode { List(jsonDataValid).getEvents() }.doesNotThrowAnyException()
+
         // Comprobar que la lista tiene 1 evento
         assertThat(List(jsonDataValid).getEvents().size).isEqualTo(7)
 

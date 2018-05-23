@@ -23,7 +23,6 @@
 
 package org.cygnux.smdmobile.configuration
 
-import android.content.Context
 import android.preference.PreferenceManager
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -39,7 +38,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-internal class ConfigurationPreferencesKTest {
+internal class ConfigurationPreferencesKtTest {
     /**
      * Comprobar el contexto
      */
@@ -53,6 +52,8 @@ internal class ConfigurationPreferencesKTest {
      */
     @Test
     fun check_save_and_read() {
+        assertThat(sOriginalConfiguration).isNotNull()
+
         assertThatCode {
             sConfigurationPreferences.save(sConfiguration)
             sConfigurationPreferences.read()
@@ -96,9 +97,10 @@ internal class ConfigurationPreferencesKTest {
     }
 
     companion object {
-        private lateinit var sAppContext: Context
-        private lateinit var sConfigurationPreferences: ConfigurationPreferences
+        private val sAppContext = InstrumentationRegistry.getTargetContext()
+        private val sConfigurationPreferences = ConfigurationPreferences(PreferenceManager.getDefaultSharedPreferences(sAppContext))
         private val sConfiguration = Configuration()
+        private val sOriginalConfiguration = sConfigurationPreferences.read()
 
         /**
          * Inicializar las preferencias
@@ -106,10 +108,6 @@ internal class ConfigurationPreferencesKTest {
         @BeforeClass
         @JvmStatic
         fun setUp() {
-            // Context of the app under test.
-            sAppContext = InstrumentationRegistry.getTargetContext()
-            sConfigurationPreferences = ConfigurationPreferences(PreferenceManager.getDefaultSharedPreferences(sAppContext))
-
             sConfiguration.lightThemeEnabled = true
 //            sConfiguration.notificationSound = sAppContext.getString(R.string.pref_ringtone_silent)
             sConfiguration.notificationsEnabled = true
@@ -132,8 +130,14 @@ internal class ConfigurationPreferencesKTest {
          */
         @AfterClass
         fun reset() {
-            PreferenceManager.getDefaultSharedPreferences(sAppContext).edit().clear().commit()
-            Log.i("TEST", "Preferencias borradas ...")
+            val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(sAppContext)
+            sharedPreferences.edit().clear().commit()
+
+            Log.i("TEST", "Preferencias borradas")
+
+            sConfigurationPreferences.save(sOriginalConfiguration)
+
+            Log.i("TEST", "Preferencias restablecidas")
         }
     }
 }
