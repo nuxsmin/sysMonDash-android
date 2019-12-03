@@ -19,6 +19,6 @@ It uses a "dummy" backed that has some predefined events and generates a random 
 
 Screenshots are really useful...
 
-![Main Screen](http://sysmondash.cygnux.org:11080/assets/scr-main.jpg)
+![Main Screen](http://sysmondash.cygnux.org/assets/scr-main.jpg)
 
-![Settings Screen](http://sysmondash.cygnux.org:11080/assets/scr-settings.jpg)
+![Settings Screen](http://sysmondash.cygnux.org/assets/scr-settings.jpg)
